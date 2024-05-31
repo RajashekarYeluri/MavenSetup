@@ -83,7 +83,9 @@ public class SkillsWebsite {
 	        e.printStackTrace();
 	    }
 
-	    
+	    // Locating the success message and printing it.
+	    WebElement successMessage = driver.findElement(By.xpath("//div[@id='et_pb_contact_form_0']//div[contains(@class, 'et-pb-contact-message')]"));
+	    System.out.println("Success Message: " + successMessage.getText());
 	}
 
 }

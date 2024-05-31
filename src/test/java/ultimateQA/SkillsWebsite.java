@@ -74,7 +74,19 @@ public class SkillsWebsite {
 		Thread.sleep(5000);
 		
 	}
-	
+	@Test(priority = 6)
+	public void SubmitButton() {
+	    driver.findElement(By.xpath("//button[@class=\"et_pb_contact_submit et_pb_button\"]")).click();
+	    try {
+	        Thread.sleep(10000); 
+	    } catch (InterruptedException e) {
+	        e.printStackTrace();
+	    }
+
+	    // Locating the success message and printing it.
+	    WebElement successMessage = driver.findElement(By.xpath("//div[@id='et_pb_contact_form_0']//div[contains(@class, 'et-pb-contact-message')]"));
+	    System.out.println("Success Message: " + successMessage.getText());
+	}
 
 }
 
